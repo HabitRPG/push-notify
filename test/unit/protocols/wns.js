@@ -28,7 +28,6 @@ describe('WNS', function () {
         payload: 'XML',
         type: 'badge'
       });
-
       expect(wns.send).to.be.calledWith('URI', 'XML', 'wns/badge', {
         client_id: 'foo',
         client_secret: 'bar'

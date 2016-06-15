@@ -106,7 +106,7 @@ gcm.send({
   {string|string[]} registrationId Device registration id
   {string} collapseKey Collapse key
   {boolean} delayWhileIdle If included, indicates that the message should not be sent immediately if the device is idle. The server will wait for the device to become active, and then only the last message for each collapse_key value will be sent. Optional. The default value is false, and must be a JSON boolean.
-  {number} timeToLive How long (in seconds) the message should be kept on GCM 
+  {number} timeToLive How long (in seconds) the message should be kept on GCM
   {object} data Custom data
 ```
 
@@ -134,61 +134,6 @@ Emmited when a registration id must be updated in the database.
 
 ```js
 gcm.on('updated', function (result, registrationId) {});
-```
-
-### Android Cloud to Device Messaging (C2DM)
-
-#### Example
-
-```js
-// Create a new C2DM sender.
-var c2dm = require('push-notify').c2dm({
-  user: 'user@gmail.com',
-  password: 'password',
-  domain: 'com.myapp'
-});
-
-// Send notification.
-c2dm.send({
-  registration_id: 'REGISTRATION_ID',
-  collapse_key: 'COLLAPSE_KEY',
-  'data.titre': 'Hello world!',
-  'data.text': 'Is that true?'
-});
-```
-
-#### Notification
-
-```
-  {string|string[]]} registration_id Device registration id
-  {string} collapse_key Collapse key
-  {string} data.* Custom data field
-```
-
-#### Events
-
-##### transmitted
-
-Emmited when a notification was correctly transmitted to Google servers.
-
-```js
-c2dm.on('transmitted', function (messageId, payload, registrationId) {});
-```
-
-##### transmissionError
-
-Emmited when a error occurs during notfication transmission.
-
-```js
-c2dm.on('transmissionError', function (error, payload, registrationId) {});
-```
-
-##### error
-
-Called when an error occurs during the login.
-
-```js
-c2dm.on('error', function (error) {});
 ```
 
 ### Windows Push Notification Service (WNS)
@@ -284,7 +229,6 @@ mpns.on('transmissionError', function (error, payload, pushUri) {});
 
 * apn: [node-apn](https://github.com/argon/node-apn)
 * gcm: [node-gcm](https://github.com/ToothlessGear/node-gcm)
-* c2dm: [node-c2dm](https://github.com/SpeCT/node-c2dm)
 * mpns: [node-mpns](https://github.com/jeffwilcox/mpns)
 * wns: [wns](https://github.com/tjanczuk/wns)
 

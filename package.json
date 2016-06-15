@@ -7,12 +7,12 @@
     "push",
     "apns",
     "apn",
-    "c2dm",
     "mpns",
     "gcm"
   ],
   "scripts": {
-    "test": "mocha --recursive test/unit"
+    "test": "mocha --recursive test/unit",
+    "coverage": "istanbul cover _mocha -- --recursive test/unit"
   },
   "author": "Bergé Greg <berge.greg@gmail.com>",
   "licence": "MIT",
@@ -29,20 +29,20 @@
     "node": ">=0.6.5"
   },
   "dependencies": {
-    "apn": "^1.5.2",
-    "bluebird": "^2.1.3",
-    "c2dm": "^1.2.1",
-    "lodash": "^2.4.1",
+    "apn": "^1.7.6",
+    "bluebird": "^3.4.0",
+    "lodash": "^4.13.1",
     "mpns": "^2.1.0",
-    "node-gcm": "^0.9.11",
+    "node-gcm": "^0.14.3",
     "pipe-event": "^0.1.0",
-    "q": "^1.0.1",
+    "q": "^1.4.1",
     "wns": "^0.5.3"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.20.1",
-    "sinon": "^1.10.2",
-    "sinon-chai": "^2.5.0"
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
   }
 }
