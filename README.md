@@ -1,7 +1,5 @@
 # push-notify
-[![Build Status](https://travis-ci.org/neoziro/push-notify.svg?branch=master)](https://travis-ci.org/neoziro/push-notify)
-[![Dependency Status](https://david-dm.org/neoziro/push-notify.svg?theme=shields.io)](https://david-dm.org/neoziro/push-notify)
-[![devDependency Status](https://david-dm.org/neoziro/push-notify/dev-status.svg?theme=shields.io)](https://david-dm.org/neoziro/push-notify#info=devDependencies)
+[![Build Status](https://travis-ci.org/HabitRPG/push-notify.svg?branch=master)](https://travis-ci.org/neoziro/push-notify)
 
 Easily send notifications over several protocols.
 
