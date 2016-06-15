@@ -42,7 +42,7 @@ describe('GCM', function () {
           collapseKey: 'myCollapseKey',
           data: {message: 'my message', title: 'my title'}
         }
-      }), ['myRegistrationId'], 4);
+      }), {registrationTokens: ['myRegistrationId']}, 4);
     });
 
     it('should be possible to send to several registration ids', function () {
@@ -61,7 +61,7 @@ describe('GCM', function () {
           collapseKey: 'myCollapseKey',
           data: {message: 'my message', title: 'my title'}
       }
-      }), ['myRegistrationId1', 'myRegistrationId2'], 4);
+    }), {registrationTokens:['myRegistrationId1', 'myRegistrationId2']}, 4);
     });
 
     describe('with an error', function () {
